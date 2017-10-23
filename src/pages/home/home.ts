@@ -35,8 +35,9 @@ export class HomePage {
   	this.pokemonNumber++;
   }
 
-  openPokemonDetailModal(){
-  	const pokemonDetailModal = this.modal.create('PokemonDetailsPage');
+  openPokemonDetailModal(myPokemon){
+  	console.log(myPokemon);
+  	const pokemonDetailModal = this.modal.create('PokemonDetailsPage', {pokemon: myPokemon});
   	pokemonDetailModal.present();
   }
 
