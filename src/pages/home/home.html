@@ -11,8 +11,8 @@
         <img src="{{pokemon.sprites.front_default}}">
       </ion-thumbnail>
       <h2>{{pokemon.name}}</h2>
-      <button ion-button clear item-end>View</button>
+      <button (click)="openPokemonDetailModal()" ion-button clear item-end><ion-icon name="book"> infos</ion-icon></button>
     </ion-item>
   </ion-list>
-  <button (click)="getPokemon()" ion-button>Mais pokemons</button>
+  <button (click)="getPokemon()" color="danger" ion-button>Mais um pokemon</button>
 </ion-content>

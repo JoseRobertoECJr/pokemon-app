@@ -19,7 +19,7 @@ export class PokemonsProvider {
     console.log('Hello PokemonsProvider Provider');
   }
 
-  getPokemon(id: string): Observable<any> {
+  getPokemon(id: number): Observable<any> {
   	return this.http.get(this.pokemonApiUrl + id)
             .map(res => res.json())
             .catch(this.handleError);

@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
-import { NavController } from 'ionic-angular';
+import { NavController, ModalController } from 'ionic-angular';
 import { PokemonsProvider } from '../../providers/pokemons/pokemons';
+import { PokemonDetailsPage } from '../pokemon-details/pokemon-details';
 
 @Component({
   selector: 'page-home',
@@ -12,7 +13,7 @@ export class HomePage {
 	pokemons: any[];
 	errorMessage: string;
 
-  constructor(public navCtrl: NavController, public pokemonsProvider: PokemonsProvider) {
+  constructor(public navCtrl: NavController, public pokemonsProvider: PokemonsProvider, private modal: ModalController) {
   	this.pokemonNumber = 1;
   	this.pokemons = [];
   }
@@ -32,6 +33,11 @@ export class HomePage {
   				error => this.errorMessage = <any>error
   			);
   	this.pokemonNumber++;
+  }
+
+  openPokemonDetailModal(){
+  	const pokemonDetailModal = this.modal.create('PokemonDetailsPage');
+  	pokemonDetailModal.present();
   }
 
 }

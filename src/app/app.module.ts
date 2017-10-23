@@ -19,7 +19,7 @@ import { PokemonsProvider } from '../providers/pokemons/pokemons';
     AboutPage,
     ContactPage,
     HomePage,
-    TabsPage
+    TabsPage,
   ],
   imports: [
     BrowserModule,
@@ -32,7 +32,7 @@ import { PokemonsProvider } from '../providers/pokemons/pokemons';
     AboutPage,
     ContactPage,
     HomePage,
-    TabsPage
+    TabsPage,
   ],
   providers: [
     StatusBar,
